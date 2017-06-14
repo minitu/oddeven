@@ -1,0 +1,13 @@
+mainmodule oddeven {
+  readonly CProxy_Main mainProxy;
+
+  mainchare Main {
+    entry Main(CkArgMsg *m);
+    entry [reductiontarget] void done();
+  };
+
+  array [1D] Element {
+    entry Element();
+    entry void receive(int elem);
+  };
+};
